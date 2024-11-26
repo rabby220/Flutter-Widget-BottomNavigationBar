@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
+import '../../../widgets/appBar.dart';
 import '../controllers/settings_controller.dart';
 
 class SettingsView extends GetView<SettingsController> {
@@ -9,10 +9,8 @@ class SettingsView extends GetView<SettingsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SettingsView'),
-        centerTitle: true,
-      ),
+      appBar: appBarView.buildAppBarWidget(
+          text: 'SettingsView', color: Colors.blue),
       body: const Center(
         child: Text(
           'SettingsView is working',
